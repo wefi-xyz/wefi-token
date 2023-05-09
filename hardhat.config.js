@@ -47,7 +47,6 @@ function accounts(chainKey) {
  * @type import('hardhat/config').HardhatUserConfig
  */
 module.exports = {
-
   solidity: {
     compilers: [
       {
@@ -106,7 +105,7 @@ module.exports = {
     ethereum: {
       url: "https://mainnet.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161", // public infura endpoint
       chainId: 1,
-      accounts: accounts(),
+      accounts: accounts()
     },
     bsc: {
       url: "https://bsc-dataseed1.binance.org",
@@ -119,9 +118,10 @@ module.exports = {
       accounts: accounts(),
     },
     polygon: {
-      url: "https://rpc-mainnet.maticvigil.com",
+      url: "https://polygon-mainnet.g.alchemy.com/v2/EGqfnWVd4gZTzvkwYSm0MMae7rosqvsW",
       chainId: 137,
       accounts: accounts(),
+      gasPrice: "auto"
     },
     arbitrum: {
       url: `https://arb1.arbitrum.io/rpc`,

@@ -10,8 +10,8 @@ import "../token/oft/v2/OFTV2.sol";
 /// @title A LayerZero OmnichainFungibleToken
 /// @notice Use this contract only on the BASE CHAIN. It locks tokens on source, on outgoing send(), and unlocks tokens when receiving from other chains.
 contract WeFi is OFTV2, ERC20Permit, ERC20Votes {
-    constructor(address _layerZeroEndpoint, uint _initialSupply, uint8 _sharedDecimals) OFTV2("WeFi", "WEFI", _sharedDecimals, _layerZeroEndpoint) ERC20Permit("WeFi") {
-        _mint(_msgSender(), _initialSupply);
+    constructor(address _layerZeroEndpoint, uint _initialSupply, address receiver, uint8 _sharedDecimals) OFTV2("WeFi", "WEFI", _sharedDecimals, _layerZeroEndpoint) ERC20Permit("WeFi") {
+        _mint(receiver, _initialSupply);
     }
 
     function _afterTokenTransfer(address from, address to, uint256 amount)

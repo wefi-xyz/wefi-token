@@ -118,7 +118,7 @@ module.exports = {
       accounts: accounts(),
     },
     polygon: {
-      url: "https://polygon-mainnet.g.alchemy.com/v2/EGqfnWVd4gZTzvkwYSm0MMae7rosqvsW",
+      url: "https://rpc-mainnet.maticvigil.com",
       chainId: 137,
       accounts: accounts(),
       gasPrice: "auto"

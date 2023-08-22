@@ -7,6 +7,7 @@
   "optimism":         111,
   "fantom":           112,
   "zksync-mainnet":   165,
+  "linea":            183,
 
   "goerli":           10121,
   "bsc-testnet":      10102,

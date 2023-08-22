@@ -148,6 +148,11 @@ module.exports = {
       chainId: 324,
       accounts: accounts()
     },
+    'linea': {
+      url: `https://rpc.linea.build`,
+      chainId: 59144,
+      accounts: accounts()
+    },
     goerli: {
       url: "https://goerli.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161", // public infura endpoint
       chainId: 5,
@@ -183,5 +188,20 @@ module.exports = {
       chainId: 4002,
       accounts: accounts(),
     }
-  }
+  },
+  etherscan: {
+    apiKey: {
+      linea: process.env['ETHERSCAN_API_KEY_LINEA'],
+    },
+    customChains: [
+      {
+        network: "linea",
+        chainId: 59144,
+        urls: {
+          apiURL: "https://api.lineascan.build/api",
+          browserURL: "https://lineascan.build/"
+        }
+      }
+    ]
+  },
 };
